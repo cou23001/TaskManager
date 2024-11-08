@@ -32,7 +32,7 @@ fun listTasks() {
 }
 
 fun completeTask() {
-    println("Completing a task...")
+    println("Complete a task...")
 }
 
 fun main() {

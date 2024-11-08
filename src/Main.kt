@@ -23,12 +23,27 @@ fun addTask() {
     taskManager.addTask(desc)
 }
 
+fun removeTask() {
+    println("Deleting task...")
+}
+
+fun listTasks() {
+    println("Listing tasks...")
+}
+
+fun completeTask() {
+    println("Completing a task...")
+}
+
 fun main() {
     var selection: String?
     do {
         selection = menu()
         when (selection) {
             "1" -> addTask()
+            "2" -> removeTask()
+            "3" -> listTasks()
+            "4" -> completeTask()
             "5" -> println("Exiting...")
             else -> println("Invalid selection. Please try again.")
         }

@@ -7,4 +7,12 @@ class TaskManager {
         tasks.add(task)
         println("Task added: $task")
     }
+
+    fun listTasks() {
+        if (tasks.isEmpty()) {
+            println("No tasks found.")
+        } else {
+            tasks.forEach { println(it.toString())}
+        }
+    }
 }

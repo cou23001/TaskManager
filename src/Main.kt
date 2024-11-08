@@ -29,6 +29,7 @@ fun removeTask() {
 
 fun listTasks() {
     println("Listing tasks...")
+    taskManager.listTasks()
 }
 
 fun completeTask() {

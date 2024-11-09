@@ -1,9 +1,12 @@
+/** Object to manage tasks */
 val taskManager = TaskManager()
 
+/**
+ * Main menu of Task Manager
+ */
 fun menu(): String? {
     println("**********************")
     println("**** Task Manager ****")
-    println("**********************")
 
     println()
     println("1. Add Task")
@@ -16,6 +19,9 @@ fun menu(): String? {
     return readlnOrNull()
 }
 
+/**
+ * Function to add a task to the collection
+ */
 fun addTask() {
     println("Adding task...")
     print("Enter task description: ")
@@ -23,6 +29,9 @@ fun addTask() {
     taskManager.addTask(desc)
 }
 
+/**
+ * Function to delete a task from the collection
+ */
 fun deleteTask() {
     println("Deleting a task...")
     print("Type task ID: ")
@@ -36,11 +45,17 @@ fun deleteTask() {
 
 }
 
+/**
+ * Function to list tasks
+ */
 fun listTasks() {
     println("Listing tasks...")
     taskManager.listTasks()
 }
 
+/**
+ * Function to change isCompleted attribute to true
+ */
 fun completeTask() {
     println("Complete a task...")
     print("Type task ID: ")
@@ -53,6 +68,9 @@ fun completeTask() {
     }
 }
 
+/**
+ * Main function to display task options
+ */
 fun main() {
     var selection: String?
     do {

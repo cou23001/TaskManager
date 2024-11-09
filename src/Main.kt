@@ -43,6 +43,14 @@ fun listTasks() {
 
 fun completeTask() {
     println("Complete a task...")
+    print("Type task ID: ")
+    val id = readlnOrNull()?.toIntOrNull()
+    if (id != null) {
+        taskManager.completeTask(id)
+    }
+    else {
+        println("Task not found.")
+    }
 }
 
 fun main() {

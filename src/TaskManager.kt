@@ -26,4 +26,15 @@ class TaskManager {
             tasks.forEach { println(it.toString())}
         }
     }
+
+    fun completeTask(id: Int) {
+        val task = tasks.find { it.id == id }
+        if (task != null) {
+            task.completeTask()
+            println("Task completed: $task" )
+        }
+        else {
+            println("Task not found.")
+        }
+    }
 }

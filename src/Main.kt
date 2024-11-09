@@ -23,8 +23,17 @@ fun addTask() {
     taskManager.addTask(desc)
 }
 
-fun removeTask() {
+fun deleteTask() {
     println("Deleting task...")
+    print("Type task ID: ")
+    val id = readlnOrNull()?.toIntOrNull()
+    if (id != null) {
+        taskManager.removeTask(id)
+    }
+    else {
+        println("Task not found.")
+    }
+
 }
 
 fun listTasks() {
@@ -42,7 +51,7 @@ fun main() {
         selection = menu()
         when (selection) {
             "1" -> addTask()
-            "2" -> removeTask()
+            "2" -> deleteTask()
             "3" -> listTasks()
             "4" -> completeTask()
             "5" -> println("Exiting...")

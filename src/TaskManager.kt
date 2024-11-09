@@ -8,6 +8,17 @@ class TaskManager {
         println("Task added: $task")
     }
 
+    fun removeTask(id: Int) {
+        val task = tasks.find { it.id == id }
+        if (task != null) {
+            tasks.remove(task)
+            println("Task deleted: $task" )
+        }
+        else {
+            println("Task not found.")
+        }
+    }
+
     fun listTasks() {
         if (tasks.isEmpty()) {
             println("No tasks found.")

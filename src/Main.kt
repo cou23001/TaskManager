@@ -24,7 +24,7 @@ fun addTask() {
 }
 
 fun deleteTask() {
-    println("Deleting task...")
+    println("Deleting a task...")
     print("Type task ID: ")
     val id = readlnOrNull()?.toIntOrNull()
     if (id != null) {

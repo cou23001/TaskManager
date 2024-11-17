@@ -84,6 +84,8 @@ class TaskManager {
 
         if (file != null) {
             if (file.exists()) {
+                // clear the collection
+                tasks.removeAll(tasks)
                 file.forEachLine { line ->
                     // Split the line by commas and parse the data
                     val parts = line.split(",")

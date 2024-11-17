@@ -5,7 +5,7 @@ val taskManager = TaskManager()
  * Main menu of Task Manager
  */
 fun menu(): String? {
-    println("**********************")
+    println("\n**********************")
     println("**** Task Manager ****")
 
     println()

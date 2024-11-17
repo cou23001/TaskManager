@@ -13,7 +13,9 @@ fun menu(): String? {
     println("2. Delete Task")
     println("3. List Tasks")
     println("4. Complete Task")
-    println("5. Exit")
+    println("5. Save Tasks to a file")
+    println("6. Read Tasks from a file")
+    println("7. Exit")
     println()
     print("Select: ")
     return readlnOrNull()
@@ -69,6 +71,22 @@ fun completeTask() {
 }
 
 /**
+ * Function to save objects to a file
+ */
+fun savingTasks() {
+    println("Saving the tasks...")
+    taskManager.saveTasks()
+}
+
+/**
+ * Function to read objects from a file
+ */
+fun readingTasks() {
+    println("Reading tasks from file...")
+    taskManager.readTasks()
+}
+
+/**
  * Main function to display task options
  */
 fun main() {
@@ -80,8 +98,10 @@ fun main() {
             "2" -> deleteTask()
             "3" -> listTasks()
             "4" -> completeTask()
-            "5" -> println("Exiting...")
+            "5" -> savingTasks()
+            "6" -> readingTasks()
+            "7" -> println("Exiting...")
             else -> println("Invalid selection. Please try again.")
         }
-    } while (selection != "5")
+    } while (selection != "7")
 }
